@@ -1,0 +1,23 @@
+
+// this makes the build break whether or not we 'inlclude' any 
+// subprojects in settings.gradle
+allprojects { 
+  apply plugin: 'greeting'
+}
+
+// this breaks the build only if we have any subprojects included
+subprojects { 
+  apply plugin: 'greeting'
+}
+
+
+task noop {
+  doFirst { 
+    println "did nothing"
+  }
+}
+
+task wrapper(type: Wrapper) {
+  gradleVersion = '1.8'
+  jarFile = 'wrapper/gradle-wrapper.jar'
+}

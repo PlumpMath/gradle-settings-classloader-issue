@@ -1,0 +1,25 @@
+
+include 'subproject'
+
+buildscript { 
+  ext.pluginJar = files('../greeting-plugin/build/libs/greeting-plugin.jar')
+
+  dependencies {
+    classpath pluginJar
+  }
+
+  // METHOD 1: Unsupported and undocumented...but it works
+  //configurations.classpath.each { file -> settings.classLoader.addURL(file.toURI().toURL()) }
+}
+
+gradle.allprojects { 
+  buildscript { 
+    dependencies { 
+      // METHOD 2: Supported and documented...but ends up with class cast exception
+      // and classloader incompatibility 
+      classpath pluginJar
+    }
+  }
+}
+
+new MultiProjectConfigurator().setup(this)
