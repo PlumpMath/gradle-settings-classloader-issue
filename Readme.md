@@ -1,5 +1,5 @@
 ## What is this?
-This repo contains the minimal set of files to demonstrate an issue in gradle classloading 
+This repo contains a minimalistic sample project demonstrating an issue in gradle classloading 
 between the settings.gradle file and subproject plugin users. 
 
 This repo was created solely as a support tool for the following gradle forums thread: 
