@@ -4,7 +4,7 @@ between the settings.gradle file and subproject plugin users.
 
 This repo was created solely as a support tool for the following gradle forums thread: 
 
-(http://forums.gradle.org/gradle/topics/class_loader_issue_between_settings_gradle_and_sub_projects_using_a_plugin)
+http://forums.gradle.org/gradle/topics/class_loader_issue_between_settings_gradle_and_sub_projects_using_a_plugin
 
 ## How to run it
 
